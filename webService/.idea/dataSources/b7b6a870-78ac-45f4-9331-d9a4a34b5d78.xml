@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="practice@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.1">
+    <root id="1"/>
+    <schema id="2" parent="1" name="practice">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="information_schema"/>
+    <schema id="4" parent="1" name="mysql"/>
+    <schema id="5" parent="1" name="performance_schema"/>
+    <schema id="6" parent="1" name="sys"/>
+    <table id="7" parent="2" name="Integration"/>
+    <table id="8" parent="2" name="calculator"/>
+    <table id="9" parent="2" name="slau"/>
+    <column id="10" parent="7" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="11" parent="7" name="c_x3">
+      <Position>2</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="12" parent="7" name="c_x2">
+      <Position>3</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="13" parent="7" name="c_x">
+      <Position>4</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="14" parent="7" name="c">
+      <Position>5</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="15" parent="7" name="numSteps">
+      <Position>6</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="16" parent="7" name="leftLimit">
+      <Position>7</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="17" parent="7" name="rightLimit">
+      <Position>8</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="18" parent="7" name="answer">
+      <Position>9</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <key id="19" parent="7" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="20" parent="8" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="21" parent="8" name="firstOperand">
+      <Position>2</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="22" parent="8" name="secondOperand">
+      <Position>3</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="23" parent="8" name="operation">
+      <Position>4</Position>
+      <DataType>varchar(1)|0</DataType>
+    </column>
+    <column id="24" parent="8" name="answer">
+      <Position>5</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <key id="25" parent="8" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="26" parent="9" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="27" parent="9" name="sizeSlau">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="28" parent="9" name="equations">
+      <Position>3</Position>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <column id="29" parent="9" name="answer">
+      <Position>4</Position>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <key id="30" parent="9" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>

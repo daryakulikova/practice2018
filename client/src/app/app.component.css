@@ -1,0 +1,99 @@
+body {
+  background: linear-gradient(45deg, #EECFBA, #C5DDE8);
+}
+div{
+  text-align: center;
+}
+h1{
+  text-align: center;
+}
+button {
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+  padding: .8em 1em calc(.8em + 3px);
+  border-radius: 3px;
+  background: rgb(96,145,172);
+  box-shadow: 0 -3px rgb(46,95,122) inset;
+  transition: 0.2s;
+}
+button:hover { background: rgb(30, 144, 255); }
+
+button:active {
+  background: rgb(96,145,1725);
+  box-shadow: 0 3px rgb(46,95,122) inset;
+}
+#nav3, #nav3 li {
+  margin: 0;
+  padding: 0;
+}
+#nav3 {
+  text-align: center; /* пункты и текст горизонтально по центру */
+  background: rgb(46,95,122);
+}
+#nav3 li {
+  display: inline-block;
+}
+#nav3 a {
+  display: block;
+  padding: 3px 15px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 30px;
+}
+#nav3 a:hover {
+  background: rgb(96,145,172);
+}
+table {
+  margin: auto;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+  font-size: 14px;
+  background: white;
+  max-width: 70%;
+  width: 70%;
+  border-collapse: collapse;
+  text-align: center;
+}
+th {
+  font-size: 13px;
+  font-weight: normal;
+  background: #b9c9fe;
+  border-top: 4px solid #aabcfe;
+  border-bottom: 1px solid #fff;
+  color: #039;
+  padding: 8px;
+}
+td {
+  text-align: center;
+  background: #e8edff;
+  border-bottom: 1px solid #fff;
+  color: #669;
+  border-top: 1px solid transparent;
+  padding: 8px;
+}
+tr:hover td {background: #ccddff;}
+
+.calc{
+  width:100px;
+  height:75px;
+  background: rgb(255,255,255);
+  color: rgb(46,95,122);
+  font-size: 30px;
+}
+label{
+  color: rgb(46,95,122);
+  font-size: 30px;
+}
+.integr{
+  font-size: 30px;
+}
+input{
+  width:60px;
+  height:40px;
+  margin-top: 6px;
+}
+.inp{
+  width:150px;
+  height:40px;
+  margin-top: 6px;
+}

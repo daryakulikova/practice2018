@@ -1,0 +1,40 @@
+<script src="node_modules/chart.js/src/chart.js"></script>
+<div>
+  <input placeholder="Enter X" type="text" size="5" [(ngModel)]="x_input">
+  <input placeholder="Enter Y" type="text" size="5" [(ngModel)]="y_input">
+</div>
+<div>
+  <table>
+  <tr>
+    <th>№</th>
+    <th>X</th>
+    <th>Y</th>
+  </tr>
+  <tr *ngFor="let point of mas.points; let i=index">
+    <td>{{i+1}}</td>
+    <td>{{point.x}}</td>
+    <td>{{point.y}}</td>
+  </tr>
+  </table>
+</div>
+<div>
+  <button (click)="add()">Add points</button>
+  <button (click)="delete()">Delete last point</button>
+  <button (click)="clear()">Clear table</button>
+  <button (click)="interpol()">Interpolate</button>
+</div>
+<div class="row">
+  <div class="col-md-6">
+    <div style="display: block;">
+      <canvas baseChart width="400" height="400"
+              [datasets]="lineChartData"
+              [labels]="lineChartLabels"
+              [options]="lineChartOptions"
+              [colors]="lineChartColors"
+              [legend]="lineChartLegend"
+              [chartType]="lineChartType"
+              (chartHover)="chartHovered($event)"
+              (chartClick)="chartClicked($event)"></canvas>
+    </div>
+  </div>
+</div>

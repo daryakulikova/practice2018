@@ -1,0 +1,49 @@
+<div class="integr">
+  <img src="../assets/images/p1.ico" width="20"/>
+  <input type="text" [(ngModel)]="c_x3">x^3+
+  <input type="text" [(ngModel)]="c_x2">x^2+
+  <input type="text" [(ngModel)]="c_x">x+
+  <input type="text" [(ngModel)]="c">=
+  <Label class="result">{{result}}</Label>
+</div>
+<div>
+  <input class="inp" type="text" placeholder="Number of steps" [(ngModel)]="numStep">
+  <input class="inp" type="text" placeholder="Left limit of integration" [(ngModel)]="a">
+  <input class="inp" type="text" placeholder="Right limit of integration" [(ngModel)]="b">
+  <p><select [(ngModel)]="metod" >
+    <option selected value="1">Rectangle method</option>
+    <option value="2">Trapezium method</option>
+    <option value="3">Simpson's method</option>
+  </select></p>
+  <h2>
+    <button (click)="decide()">Intagrate</button>
+  </h2>
+</div>
+<div>
+  <Button (click)="integrbd()">Show previous operations</Button>
+  <table class="operatiombd">
+    <tr>
+      <th>id</th>
+      <th>c_x3</th>
+      <th>c_x2</th>
+      <th>c_x</th>
+      <th>c</th>
+      <th>numSteps</th>
+      <th>leftLimit</th>
+      <th>rightLimit</th>
+      <th>answer</th>
+
+    </tr>
+    <tr *ngFor="let op of resultbd1; let i=index">
+      <td>{{op.id}}</td>
+      <td>{{op.cX3}}</td>
+      <td>{{op.cX2}}</td>
+      <td>{{op.cX}}</td>
+      <td>{{op.c}}</td>
+      <td>{{op.numSteps}}</td>
+      <td>{{op.leftLimit}}</td>
+      <td>{{op.rightLimit}}</td>
+      <td>{{op.answer}}</td>
+    </tr>
+  </table>
+</div>

@@ -1,0 +1,42 @@
+<div class="resultlabel">
+  <Label class="result">{{result}}</Label><br>
+</div>
+<div >
+  <Button class="calc" (click)="append('1')">1</Button>
+  <Button class="calc" (click)="append('2')">2</Button>
+  <Button class="calc" (click)="append('3')">3</Button>
+  <Button class="calc" (click)="operations('+')">+</Button><br>
+  <Button class="calc" (click)="append('4')">4</Button>
+  <Button class="calc" (click)="append('5')">5</Button>
+  <Button class="calc" (click)="append('6')">6</Button>
+  <Button class="calc" (click)="operations('-')">-</Button><br>
+  <Button class="calc" (click)="append('7')">7</Button>
+  <Button class="calc" (click)="append('8')">8</Button>
+  <Button class="calc" (click)="append('9')">9</Button>
+  <Button class="calc" (click)="operations('*')">*</Button><br>
+  <Button class="calc" (click)="clear()">CL</Button>
+  <Button class="calc" (click)="append('0')">0</Button>
+  <Button class="calc" (click)="operations('=')">=</Button>
+  <Button class="calc" (click)="operations(':')">:</Button><br>
+</div>
+
+<div>
+  <Button (click)="calcbd()">Show previous operations</Button>
+  <table class="operatiombd">
+    <tr>
+      <th>id</th>
+      <th>firstOperand</th>
+      <th>operation</th>
+      <th>secondOperand</th>
+      <th>answer</th>
+
+    </tr>
+    <tr *ngFor="let op of resultbd1; let i=index">
+      <td>{{op.id}}</td>
+      <td>{{op.firstOperand}}</td>
+      <td>{{op.operation}}</td>
+      <td>{{op.secondOperand}}</td>
+      <td>{{op.answer}}</td>
+    </tr>
+  </table>
+</div>
